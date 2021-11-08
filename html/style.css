@@ -1,0 +1,58 @@
+/* * is used ofr global select */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /*Google it */
+}
+
+body {
+    background-color: rgba(0, 217, 255, 0.11);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+    padding: 25px;
+}
+
+h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+
+/* . is used for CLASS */
+
+.first {
+    color: blueviolet;
+}
+
+
+/* # is used for ID */
+
+#your-name {
+    background-color: rgb(42, 106, 165);
+    border: 5px solid rgb(165, 122, 42);
+    margin-bottom: 100px;
+    padding: 10px;
+}
+
+#b1 {
+    margin: 10px;
+}
+
+input,
+button {
+    font-size: 20px;
+}
+
+#our_image {
+    width: 200px;
+}
+
+
+/*child selection */
+
+#your-name h2 {
+    color: azure;
+    text-align: center;
+}
