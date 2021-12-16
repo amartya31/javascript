@@ -1,10 +1,10 @@
 'use strict';
-/*Strict usefulness 
+/*Strict usefulness
 let val = true;
 const test = true;
 
 if (test) {
-    //vals = false; didn't let use Undeclared variable 
+    //vals = false; didn't let use Undeclared variable
     val = false;
 }
 if (val != true) {
@@ -24,26 +24,26 @@ if (typeof(out) == 'string') {
 }
 console.log(`output of func = ${out}`);*/
 /*Function Expression & Declaration  */
-/*function getAge1(age) { // normal function 
+/*function getAge1(age) { // normal function
     return (2021 - age);
 }
 const age1 = getAge1(1990);
 console.log(`Age1 = ${age1} and type = ${typeof(age1)}`)
-    //function expression 
+    //function expression
 const getAge2 = function(age) {
     return (2021 - age);
 }
 const age2 = getAge2(1991);
 console.log(`Age2 = ${age2} and type = ${typeof(age2)}`)
-    //const getAge2 = function(age) { Expression doesn't work after after calling the function 
+    //const getAge2 = function(age) { Expression doesn't work after after calling the function
     //    return (2021 - age);
     //}
-    // ARROWFUNCTION - ONLINER && MULTILINE  FUNCTION 
+    // ARROWFUNCTION - ONLINER && MULTILINE  FUNCTION
 const getAge3 = age => 1990 - age;
 const age3 = getAge2(1992);
 console.log(`Age3 = ${age3} and type = ${typeof(age3)}`)
 
-const retireAge = yearBirth => { // arrow funtion 
+const retireAge = yearBirth => { // arrow funtion
     const age = 2021 - yearBirth;
     console.log(`Age4 = ${age} and type = ${typeof(age)}`)
     const retireAgeLeft = 60 - age;
@@ -79,7 +79,7 @@ scoreKoalas = calcAverage(23, 34, 27);
 console.log(scoreDolphins, scoreKoalas);
 checkWinner(scoreDolphins, scoreKoalas);*/
 /*ARRAY*/
-/*const friends = ["Amartya", "Job", "Jay", 23 - 2]; // can mutate but not entire array 
+/*const friends = ["Amartya", "Job", "Jay", 23 - 2]; // can mutate but not entire array
 console.log(friends);
 friends[1] = "Ajay";
 console.log(friends);*/
@@ -142,7 +142,7 @@ console.log(jonas['first' + nameKey]);
 console.log(jonas['last' + nameKey]);
 //const inp = prompt("What property you want to access \n firstnam,lastname,age,job,friends");
 //if ((inp) && (jonas[inp])) {
-//    console.log(jonas.inp); // undefined since DOT doesn't work with input needs to be kept in the SQUARE bracket 
+//    console.log(jonas.inp); // undefined since DOT doesn't work with input needs to be kept in the SQUARE bracket
 //    console.log(jonas[inp]);
 //}
 jonas.location = 'Portugal';
@@ -150,7 +150,7 @@ console.log(jonas);
 console.log(`${jonas.firstName} has ${jonas.friends.length} freinds named and his best frined is ${jonas.friends[1]}`)*/
 
 //More OBJECT 
-const jonas = {
+/*const jonas = {
     firstName: 'Jonas',
     lastName: 'Schmedtmann',
     age: 2037 - 1991,
@@ -159,7 +159,37 @@ const jonas = {
     birthYear: 1991,
     hasLicence: true,
 
-    calAge: function(age) {
+    calAge: function (age) {
         return (2021 - age);
     }
 };
+console.log('😺');
+let rand = Math.trunc(Math.random() * 6);
+console.log(`The random value = ${rand}`)*/
+
+const calTip = function (bill) {
+    return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+}
+const calAvg = function (arr) {
+    let sum = 0;
+    for (let i = 0; i < arr.length; i++) {
+        // sum = sum + arr[i];
+        sum += arr[i];
+    }
+    console.log(`Sum = ${sum}`);
+    return sum / arr.length;
+}
+
+const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+const tips = [];
+const totals = [];
+
+for (let i = 0; i < bills.length; ++i) {
+    //console.log(`Bills value = ${bills[i]}`);
+    //tips[i] = calTip(bills[i]); -- WRONG 
+    //totals[i] = tips[i] + bills[i]; --  WRONG 
+    tips.push(calTip(bills[i]));
+    totals.push(tips[i] + bills[i]);
+}
+console.log(`Totals = ${totals} \n tips = ${tips}`)
+console.log(calAvg(totals));
